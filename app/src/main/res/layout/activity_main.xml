@@ -1,29 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:gravity="top|center_horizontal"
+    android:orientation="vertical"
+    android:padding="45dp"
+    tools:context="com.example.aposentadoria_atividade2.MainActivity">
 
     <TextView
+        android:id="@+id/textViewAposentadoria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Vitor de Barros"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
+        android:fontFamily="sans-serif-black"
+        android:padding="10dp"
+        android:text="calcule sua aposentadoria"
+        android:textAlignment="center"
+        android:textColor="@color/darkblue"
+        android:textSize="16dp" />
+
+    <Spinner
+        android:id="@+id/spinnerSexo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="8dp" />
+
+    <EditText
+        android:id="@+id/editTextIdade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:digits="0123456789"
+        android:hint="Insira sua idade..."
+        android:inputType="number"
+        android:maxLength="3"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="16dp" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="182dp"
-        android:layout_height="41dp"
-        android:text="calcular"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="115dp" />
+        android:id="@+id/buttonEnviar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:fontFamily="sans-serif-black"
+        android:padding="15dp"
+        android:text="Calcular"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:icon="@drawable/baseline_arrow_right_24"
+        app:iconGravity="textEnd" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textViewNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:padding="8dp"
+        android:text="Vitor de Barros"
+        android:textAlignment="center"
+        android:textColor="@color/darkblue"
+        android:textSize="16dp" />
+
+</LinearLayout>
